@@ -2,11 +2,14 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    background: radial-gradient(ellipse at bottom, #0b0b1e 0%, #000000 100%);
+    overflow: hidden;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
   }
   
   .container {
@@ -73,3 +76,39 @@ body {
     background: #eee;
   }
   
+  @media (max-width: 600px) {
+    .container {
+      padding: 20px;
+      width: 95%;
+    }
+  
+    .card-buttons {
+      grid-template-columns: 1fr !important;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    .header a {
+      font-size: 0.9rem;
+      padding: 6px 12px;
+    }
+  }
+  .stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    z-index: -1;
+    animation: starsMove 120s linear infinite;
+    opacity: 0.25;
+    pointer-events: none;
+  }
+  
+  @keyframes starsMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-500px, -1000px); }
+  }
