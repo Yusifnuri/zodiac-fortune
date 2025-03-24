@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>👤 Profile</title>
+</head>
+<body>
+  <h1>👤 Welcome!</h1>
+  <p id="info"></p>
+  <button onclick="logout()">🚪 Logout</button>
+
+  <script>
+    const token = localStorage.getItem('token');
+    if (!token) {
+      document.getElementById('info').innerText = 'You are not logged in.';
+    } else {
+      fetch('http://localhost:3000/profile', {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data.message) {
+            document.getElementById('info').innerText = data.message;
+          } else {
+            document.getElementById('info').innerText = "Token invalid or expired.";
+          }
+        })
+        .catch(() => {
+          document.getElementById('info').innerText = "Error loading profile.";
+        });
+    }
+
+    function logout() {
+      localStorage.removeItem('token');
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>

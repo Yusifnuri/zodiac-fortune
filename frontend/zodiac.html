@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🌟 Daily Horoscope</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌟 Daily Horoscope</h1>
+
+    <select id="zodiacSelect">
+      <option value="">Select your sign</option>
+      <option value="aries">♈ Aries</option>
+      <option value="taurus">♉ Taurus</option>
+      <option value="gemini">♊ Gemini</option>
+      <option value="cancer">♋ Cancer</option>
+      <option value="leo">♌ Leo</option>
+      <option value="virgo">♍ Virgo</option>
+      <option value="libra">♎ Libra</option>
+      <option value="scorpio">♏ Scorpio</option>
+      <option value="sagittarius">♐ Sagittarius</option>
+      <option value="capricorn">♑ Capricorn</option>
+      <option value="aquarius">♒ Aquarius</option>
+      <option value="pisces">♓ Pisces</option>
+    </select>
+
+    <button id="getHoroscope">Get Horoscope</button>
+
+    <div id="horoscopeResult" class="card">
+      <p id="horoscopeText"></p>
+    </div>
+
+    <br>
+    <a href="index.html">🔙 Back to Home</a>
+  </div>
+
+  <script src="js/zodiac.js"></script>
+</body>
+</html>
