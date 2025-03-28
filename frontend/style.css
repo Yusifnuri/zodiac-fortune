@@ -1,32 +1,33 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: radial-gradient(ellipse at bottom, #0b0b1e 0%, #000000 100%);
-    overflow: hidden;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
-  }
-  
-  .container {
-    background: white;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 90%;
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #333;
-  }
+  color: #fff; /* Beyaz yazı rengi */
+  background: radial-gradient(ellipse at bottom, #0b0b1e 0%, #000000 100%); /* Koyu, gizemli arka plan */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.7); /* Koyu, yarı şeffaf arka plan */
+  color: #ff6f61; /* Yazı rengini sıcak bir kırmızıya değiştir */
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Daha yoğun gölge ekledik */
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  font-family: 'Dancing Script', cursive; /* Eğlenceli ve yaratıcı yazı tipi */
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive; /* Başlık fontu */
+  font-size: 3rem; /* Başlık boyutunu artır */
+  margin-bottom: 30px;
+  color: #ff6f61; /* Başlık rengini sıcak kırmızı yap */
+}
+
   
   .card-buttons {
     display: grid;

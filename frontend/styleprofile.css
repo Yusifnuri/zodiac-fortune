@@ -1,0 +1,71 @@
+/* Genel Body Ayarları */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(ellipse at bottom, #0b0b1e 0%, #000000 100%);
+  color: white;
+  display: flex;
+  flex-direction: column; /* İçeriği dikey olarak hizala */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* İçeriklerin ortalanmasını sağlar */
+}
+
+/* Başlık (Welcome) */
+h1 {
+  font-size: 3rem;
+  color: #ff6f61; /* Sıcak kırmızı başlık rengi */
+  margin-bottom: 30px; /* Başlık ile içerik arasına boşluk ekle */
+  font-weight: bold; /* Başlık için kalın yazı */
+  letter-spacing: 2px; /* Harf aralığını artır */
+  text-transform: uppercase; /* Yazıyı büyük harfe çevir */
+}
+
+/* Bilgi metni (info) */
+#info {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #fff; /* Yazıyı beyaz yap */
+  background-color: rgba(0, 0, 0, 0.7); /* Hafif şeffaf arka plan */
+  padding: 20px;
+  border-radius: 8px;
+  width: 70%; /* Alanı biraz daha genişlet */
+  max-width: 500px; /* Maksimum genişlik */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Kutunun etrafında hafif gölge */
+}
+
+/* Buton (Logout) */
+button {
+  background: #6c63ff; /* Buton rengi */
+  color: white;
+  padding: 14px 30px;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Butona gölge ekle */
+}
+
+button:hover {
+  background: #574fd6; /* Buton hover rengi */
+}
+
+/* Mobil Uyumlu Tasarım */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  #info {
+    width: 90%; /* Bilgi kutusunun genişliğini mobilde artır */
+  }
+
+  button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
